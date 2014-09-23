@@ -1,0 +1,13 @@
+{
+  "name": "daylight",
+  "private": true,
+  "directory": "app/bower_components",
+  "dependencies": {
+    "modernizr": "~2.6.3",
+    "jquery": "~1.11.1"
+  },
+  "devDependencies": {
+    "velocity": "~1.1.0",
+    "blast-text": "~1.1.1"
+  }
+}
