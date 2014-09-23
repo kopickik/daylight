@@ -15,6 +15,7 @@ coverage
 .tmp
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+app/bower_components
 dist
 node_modules
 # Users Environment Variables
