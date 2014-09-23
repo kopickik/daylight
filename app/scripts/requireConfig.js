@@ -27,4 +27,4 @@ require.config({
 
     ]
 });
-require(['main','jquery','velocity','blast', 'underscore','backbone'], function($, _, Backbone){});
+require(['main','jquery','velocity', 'velocity-ui', 'blast', 'underscore','backbone'], function($, Velocity, _, Backbone){});

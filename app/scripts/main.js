@@ -1,28 +1,29 @@
 define(function(require, module, exports) {
   // require dependencies
-  var velocity = require('velocity');
-  var Backbone = require('backbone');
+  require('velocity');
+  require('velocity-ui');
   var projectModel = require('models/projects');
 
   // app here
-  var myApp = function() {
-    var proj1 = new projectModel;
-    var emptyDiv = $('<div/>');
-    emptyDiv.html('<h1>Hello World!</h1>').appendTo($('.hero-unit'));
-    emptyDiv.velocity({
-      opacity: 0.5,
-      translateY: '80%'
-    }, {duration: 2000})
-    .velocity({
-      translateY: 0,
-      opacity: 0.8
-    }, {duration: 2000})
-    .velocity({
-      opacity: 1,
-      translateX: '225'
-    }, {loop: 1})
-    ;
-  }
-  myApp();
+  $(document).ready(function() {
+    var myApp = function() {
+      var proj1 = new projectModel;
+      var emptyDiv = $('<div/>');
+      emptyDiv.html('<h1>Hello World!</h1>').appendTo($('.hero-unit'));
+      emptyDiv.velocity("transition.shrinkIn", {
+          stagger: 125
+      })
+      .velocity({
+        opacity: 0.5,
+        translateY: '80%'
+      }, {stagger: 200})
+      .velocity({
+        translateY: 0,
+        opacity: 0.2
+      }, {duration: 1299})
+      .velocity("transition.whirlIn", 1400);
+    }
+    myApp();
+  });
 
 });
