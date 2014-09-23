@@ -4,7 +4,8 @@ require.config({
         'jquery': '../bower_components/jquery/dist/jquery',
         'velocity': '../bower_components/velocity/velocity',
         'velocity-ui': '../bower_components/velocity/velocity.ui',
-        'blast': '../bower_components/blast-text/jquery.blast'
+        'blast': '../bower_components/blast-text/jquery.blast',
+        'lodash': '../bower_components/lodash/dist/lodash'
     },
     shim: {
         'velocity': {
@@ -18,4 +19,4 @@ require.config({
 
     ]
 });
-require(['main','jquery','velocity','blast'], function($){});
+require(['main','jquery','velocity','blast', 'lodash'], function($, _){});
