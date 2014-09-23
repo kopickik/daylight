@@ -1,10 +1,28 @@
 define(function(require, module, exports) {
-  var emptyDiv = $('<div/>');
-  emptyDiv.html('<h1>Hello World!</h1>').appendTo($('.hero-unit'));
+  // require dependencies
   var velocity = require('velocity');
-  emptyDiv.velocity({
-    opacity: 0.5,
-    translateY: '60%'
-  }, {delay: 2000});
+  var Backbone = require('backbone');
+  var projectModel = require('models/projects');
+
+  // app here
+  var myApp = function() {
+    var proj1 = new projectModel;
+    var emptyDiv = $('<div/>');
+    emptyDiv.html('<h1>Hello World!</h1>').appendTo($('.hero-unit'));
+    emptyDiv.velocity({
+      opacity: 0.5,
+      translateY: '80%'
+    }, {duration: 2000})
+    .velocity({
+      translateY: 0,
+      opacity: 0.8
+    }, {duration: 2000})
+    .velocity({
+      opacity: 1,
+      translateX: '225'
+    }, {loop: 1})
+    ;
+  }
+  myApp();
 
 });
